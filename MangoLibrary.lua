@@ -1020,7 +1020,7 @@ function addSubmenu(subName)
 		Item.Position = UDim2.new(0, 0, 0.0321969688, 0)
 		Item.Selectable = false
 		Item.Visible = false
-		Item.Size = itemSize
+		Item.Size = itemSize - UDim2.new(0,0,0, 25)
 		Item.ImageTransparency = 1
 
 		Title.Name = "Title"
@@ -1028,10 +1028,10 @@ function addSubmenu(subName)
 		Title.AnchorPoint = Vector2.new(0, 0.5)
 		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Title.BackgroundTransparency = 1.000
-		Title.Position = UDim2.new(.01, 0, 0.75, 0)
+		Title.Position = UDim2.new(0, 0, 0.5, 0)
 		Title.Size = UDim2.new(0, 189, 0, 26)
 		Title.Font = Enum.Font.GothamSemibold
-		Title.Text = tostring('<b>'..name..'</b>')
+		Title.Text = tostring('<i>'..name..'</i>')
 		Title.TextColor3 = Color3.fromRGB(248, 154, 54)
 		Title.TextScaled = true
 		Title.TextSize = 14.000
@@ -1065,3 +1065,36 @@ function init()
 	wait(.3)
 	TitleCard.Visible = false
 end
+
+local menu = addSubmenu('menu1')
+
+menu:addToggle('toggletest', false, function(val)
+	print(val)
+end)
+
+menu:addButton('buttontest', function()
+	for i, v in pairs(Submenus) do
+		print(i,v)
+	end
+end)
+
+menu:addSlider('slidertest', 7, 349, function(val)
+	print(val)
+end)
+
+menu:addDropdown('dropdowntest', {1, 2, 3}, function(val)
+	print(val)
+end)
+
+menu:addInput('inputtest', 0, function(val)
+	print(val)
+end)
+
+menu:addSpacer('This is a spacer')
+
+menu:addColorPicker('colorpickertest', Color3.fromRGB(255, 255, 255), function()
+	 
+end)
+
+
+init()
