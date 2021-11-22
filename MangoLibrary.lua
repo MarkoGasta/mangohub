@@ -1065,36 +1065,3 @@ function init()
 	wait(.3)
 	TitleCard.Visible = false
 end
-
-local menu = addSubmenu('menu1')
-
-menu:addToggle('toggletest', false, function(val)
-	print(val)
-end)
-
-menu:addButton('buttontest', function()
-	for i, v in pairs(Submenus) do
-		print(i,v)
-	end
-end)
-
-menu:addSlider('slidertest', 7, 349, function(val)
-	print(val)
-end)
-
-menu:addDropdown('dropdowntest', {1, 2, 3}, function(val)
-	print(val)
-end)
-
-menu:addInput('inputtest', 0, function(val)
-	print(val)
-end)
-
-menu:addSpacer('This is a spacer')
-
-menu:addColorPicker('colorpickertest', Color3.fromRGB(255, 255, 255), function()
-	 
-end)
-
-
-init()
