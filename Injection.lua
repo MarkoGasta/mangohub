@@ -1100,6 +1100,8 @@ if game.PlaceId == 6284583030 then
 
     sub1:addSpacer('Farming')
 
+    sub1:addSpacer('bruh')
+
     sub1:addToggle('Coin Autofarm', false, function(val)
         _G.CAutofarm = val
         print(CAutofarm)
