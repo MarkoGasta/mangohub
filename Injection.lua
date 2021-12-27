@@ -1116,5 +1116,5 @@ if game.PlaceId == 6284583030 then
         RunService.RenderStepped:Wait()
     end
 
-    -- BRuh12312
+    -- BRuh12
 end
