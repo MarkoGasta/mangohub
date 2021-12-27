@@ -161,6 +161,10 @@ uis.InputBegan:Connect(function(key)
 		end
 		InSubmenu = false
 	end
+	if key.KeyCode == Enum.KeyCode.R then
+		game.Players.LocalPlayer.PlayerGui.MangoHub:Remove()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/MarkoGasta/mangohub/main/Injection.lua"))()
+	end
 end)
 
 function addSubmenu(subName)
