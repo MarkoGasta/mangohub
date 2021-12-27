@@ -1115,6 +1115,4 @@ if game.PlaceId == 6284583030 then
         end
         RunService.RenderStepped:Wait()
     end
-
-    -- BRuh134
 end
